@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My reviews of Table Top RPG's</title>
+</head>
+<body>
+<header>
+    <h1>Reviews of all the Table Top RPG books I own</h1>
+</header>
+
+<main>
+    <url>
+        <li th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.review}"></a></li>
+    </url>
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
